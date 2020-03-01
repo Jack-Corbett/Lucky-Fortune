@@ -1,0 +1,47 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "my fortune",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "TellIntent",
+          "samples": [
+            "fortune",
+            "tell me my fortune",
+            "give me my fortune",
+            "what's my fortune",
+            "what is my fortune",
+            "tell me something",
+            "give me something"
+          ],
+          "slots": []
+        },
+        {
+          "name": "InfoIntent",
+          "samples" : [
+            "details "
+          ],
+          "slots": [
+
+          ]
+        }
+      ]
+    }
+  }
+}

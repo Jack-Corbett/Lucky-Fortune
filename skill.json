@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-GB": {
+          "summary": "Find out your fortune.",
+          "examplePhrases": [
+            "Alexa open my fortune",
+            "Alexa ask my fortune to tell me my fortune",
+            "Alexa ask my fortune for my fortune"
+          ],
+          "keywords": [
+            "my",
+            "fortune",
+            "horoscope"
+          ],
+          "name": "My Fortune",
+          "description": "Ask me for your fortune."
+        }
+      },
+      "category": "ASTROLOGY"
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom",
+          "uri": "ask-custom-My-Fortune-default"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
