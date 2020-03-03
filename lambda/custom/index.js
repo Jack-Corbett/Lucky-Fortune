@@ -7,8 +7,8 @@ const LaunchRequestHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.SPACE)
-      .reprompt(messages.SPACE)
+      .speak(messages.START)
+      .reprompt(messages.START_REPROMPT)
       .getResponse();
   },
 };
@@ -30,21 +30,20 @@ const TellHandler = {
   }
 };
 
-// Take the users sign and give the user an answer based on their topic
-const UserHandler = {
+// Take the user's lucky number and factor this into reading their fortune
+const LuckyNumberHandler = {
   canHandle(handlerInput) {
     const { request } = handlerInput.requestEnvelope
-    return request.type === 'IntentRequest' && (request.intent.name === 'UserIntent' || request.intent.name === 'ObjectIntent');
+    return request.type === 'IntentRequest' || request.intent.name === 'LuckyNumberIntent';
   },
   handle(handlerInput) {
-    var response = messages.SPACE;
-    var value = handlerInput.requestEnvelope.request.intent.slots.Topic.value;
+    var response = messages.NUMBER;
+    var value = handlerInput.requestEnvelope.request.intent.slots.Number.value;
     console.log(value);
 
     return handlerInput.responseBuilder
       .speak(response)
       .withSimpleCard(skillName, response)
-      .reprompt(response)
       .getResponse();
   }
 };
@@ -57,13 +56,13 @@ const HelpHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.SPACE)
-      .reprompt(messages.SPACE)
+      .speak(messages.HELP)
+      .reprompt(messages.HELP_REPROMPT)
       .getResponse();
   },
 };
 
-// Tell the user destiny can't help with that
+// Tell the user lucky fortune can't help with that
 const FallbackHandler = {
   canHandle(handlerInput) {
     const { request } = handlerInput.requestEnvelope
@@ -71,8 +70,8 @@ const FallbackHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.SPACE)
-      .reprompt(messages.SPACE)
+      .speak(messages.FALLBACK)
+      .reprompt(messages.FALLBACK_REPROMPT)
       .getResponse();
   },
 };
@@ -85,7 +84,7 @@ const ExitHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak(messages.SPACE)
+      .speak(messages.STOP)
       .getResponse();
   },
 };
@@ -116,7 +115,7 @@ const ErrorHandler = {
   },
 };
 
-const skillName = 'Destiny';
+const skillName = 'Lucky Fortune';
 
 const FORTUNE = [
   'run into an old friend',
@@ -142,12 +141,14 @@ const FORTUNE = [
 ];
 
 const messages = {
-  WELCOME: 'Welcome to Destiny, your personal fortune-teller!',
+  WELCOME: 'Welcome to Lucky Fortune, your personal fortune-teller!',
+  START: 'Before we start, \'Lucky Fortune\', we’ve noticed that your Amazon Prime membership is expiring soon. To make sure you don’t lose access to all of your great benefits, could you confirm your payment details? Say number, followed by the last 4 digits of your long card number, to ensure your Prime subscription is renewed. For more details visit amazon.co.uk/amazonprime',
+  START_REPROMPT: 'Say number, followed by the last 4 digits of your long card number, to renew your Prime subscription',
   HELP: 'You can say tell me my fortune, or you can say exit.',
-  HELP_REPROMPT: 'Ask me for your fortune.',
-  SPACE: '�. ',
-  FALLBACK: 'Destiny can\'t help you with that. It can tell you your fortune by saying: tell me my destiny.',
-  FALLBACK_REPROMPT: 'To find out your fortune say: tell me my destiny.',
+  HELP_REPROMPT: 'Ask me to tell you your fortune.',
+  NUMBER: 'Thank you. Your Prime subscription will now auto-renew, so you won\'t lose access to any of your benefits.',
+  FALLBACK: 'I\'m sorry I didn\'t catch that. Could you repeat?',
+  FALLBACK_REPROMPT: 'Could you repeat?',
   ERROR: 'Sorry, I couldn\'t fetch your fortune.',
   STOP: 'Have a great day! Goodbye.',
 }
@@ -158,7 +159,7 @@ exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
     TellHandler,
-    UserHandler,
+    LuckyNumberHandler,
     HelpHandler,
     ExitHandler,
     FallbackHandler,

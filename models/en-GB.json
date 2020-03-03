@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "my fortune",
+      "invocationName": "lucky fortune",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -33,12 +33,19 @@
           "slots": []
         },
         {
-          "name": "InfoIntent",
+          "name": "LuckyNumberIntent",
           "samples" : [
-            "details "
+            "number {Number}",
+            "number is {Number}",
+            "my number is {Number}",
+            "lucky number {Number}",
+            "my luck number is {Number}"
           ],
           "slots": [
-
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            }
           ]
         }
       ]

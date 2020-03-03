@@ -1,6 +1,32 @@
 {
   "deploy_settings": {
     "default": {
+      "skill_id": "amzn1.ask.skill.acfbc7e1-ec33-4989-9b6d-e639683dde7e",
+      "was_cloned": false,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "8224e5648d116532e58f95724b2fa199"
+        },
+        "interactionModel": {
+          "en-GB": {
+            "eTag": "93fe9ae136a915e506585aa6766ccac8"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:us-east-1:499295336600:function:ask-custom-My-Fortune-default",
+            "awsRegion": "us-east-1",
+            "codeUri": "lambda/custom",
+            "functionName": "ask-custom-My-Fortune-default",
+            "handler": "index.handler",
+            "revisionId": "1cef8a8c-c797-434a-8c44-3b1a079738b2",
+            "runtime": "nodejs10.x"
+          }
+        ]
       }
     }
   }

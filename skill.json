@@ -5,16 +5,16 @@
         "en-GB": {
           "summary": "Find out your fortune.",
           "examplePhrases": [
-            "Alexa open my fortune",
-            "Alexa ask my fortune to tell me my fortune",
-            "Alexa ask my fortune for my fortune"
+            "Alexa open lucky fortune",
+            "Alexa ask lucky fortune to tell me my fortune",
+            "Alexa ask lucky fortune for my fortune"
           ],
           "keywords": [
-            "my",
+            "lucky",
             "fortune",
             "horoscope"
           ],
-          "name": "My Fortune",
+          "name": "Lucky Fortune",
           "description": "Ask me for your fortune."
         }
       },
@@ -24,7 +24,7 @@
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "ask-custom-My-Fortune-default"
+          "uri": "ask-custom-Lucky-Fortune-default"
         }
       }
     },
