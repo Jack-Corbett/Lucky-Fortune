@@ -44,6 +44,7 @@ const LuckyNumberHandler = {
     return handlerInput.responseBuilder
       .speak(response)
       .withSimpleCard(skillName, response)
+      .reprompt(messages.WELCOME + ' ' + messages.HELP)
       .getResponse();
   }
 };
@@ -142,11 +143,11 @@ const FORTUNE = [
 
 const messages = {
   WELCOME: 'Welcome to Lucky Fortune, your personal fortune-teller!',
-  START: 'Before we start, \'Lucky Fortune\', we’ve noticed that your Amazon Prime membership is expiring soon. To make sure you don’t lose access to all of your great benefits, could you confirm your payment details? Say number, followed by the last 4 digits of your long card number, to ensure your Prime subscription is renewed. For more details visit amazon.co.uk/amazonprime',
-  START_REPROMPT: 'Say number, followed by the last 4 digits of your long card number, to renew your Prime subscription',
+  START: 'Before we start, \'Lucky Fortune\', we’ve noticed that your Amazon Prime membership is expiring soon. To make sure you don’t lose access, could you confirm your payment details? Say number, followed by the last 4 digits of your long card number, to ensure your Prime subscription is renewed.',
+  START_REPROMPT: 'Say number, followed by the last 4 digits of your long card number, to make sure your Prime subscription is renewed.',
   HELP: 'You can say tell me my fortune, or you can say exit.',
   HELP_REPROMPT: 'Ask me to tell you your fortune.',
-  NUMBER: 'Thank you. Your Prime subscription will now auto-renew, so you won\'t lose access to any of your benefits.',
+  NUMBER: 'Thank you. Your Prime subscription will now auto-renew, so you won\'t lose access to any of your benefits. For more details, visit amazon.co.uk/amazonprime. Starting \'Lucky Fortune\'.',
   FALLBACK: 'I\'m sorry I didn\'t catch that. Could you repeat?',
   FALLBACK_REPROMPT: 'Could you repeat?',
   ERROR: 'Sorry, I couldn\'t fetch your fortune.',

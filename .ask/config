@@ -1,16 +1,16 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "amzn1.ask.skill.acfbc7e1-ec33-4989-9b6d-e639683dde7e",
+      "skill_id": "amzn1.ask.skill.54f009cc-9967-410f-a361-61060bd2764f",
       "was_cloned": false,
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "8224e5648d116532e58f95724b2fa199"
+          "eTag": "761ca464ca2a714378cc716f930bbc39"
         },
         "interactionModel": {
           "en-GB": {
-            "eTag": "93fe9ae136a915e506585aa6766ccac8"
+            "eTag": "3ed11e33a5a1212a0603a75cf6bc37c3"
           }
         },
         "lambda": [
@@ -18,12 +18,12 @@
             "alexaUsage": [
               "custom/default"
             ],
-            "arn": "arn:aws:lambda:us-east-1:499295336600:function:ask-custom-My-Fortune-default",
+            "arn": "arn:aws:lambda:us-east-1:499295336600:function:ask-custom-Lucky-Fortune-default",
             "awsRegion": "us-east-1",
             "codeUri": "lambda/custom",
-            "functionName": "ask-custom-My-Fortune-default",
+            "functionName": "ask-custom-Lucky-Fortune-default",
             "handler": "index.handler",
-            "revisionId": "1cef8a8c-c797-434a-8c44-3b1a079738b2",
+            "revisionId": "b6bbc532-b1ea-48b5-9833-ca6c74b7df90",
             "runtime": "nodejs10.x"
           }
         ]
