@@ -148,8 +148,8 @@ const messages = {
   HELP: 'You can say tell me my fortune, or you can say exit.',
   HELP_REPROMPT: 'Ask me to tell you your fortune.',
   NUMBER: 'Thank you. Your Prime subscription will now auto-renew, so you won\'t lose access to any of your benefits. For more details, visit amazon.co.uk/amazonprime. Starting \'Lucky Fortune\'.',
-  FALLBACK: 'I\'m sorry I didn\'t catch that. Could you repeat?',
-  FALLBACK_REPROMPT: 'Could you repeat?',
+  FALLBACK: 'I\'m sorry I didn\'t catch that. Could you repeat your last request?',
+  FALLBACK_REPROMPT: 'Could you repeat your last request?',
   ERROR: 'Sorry, I couldn\'t fetch your fortune.',
   STOP: 'Have a great day! Goodbye.',
 }
