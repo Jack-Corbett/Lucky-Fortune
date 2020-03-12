@@ -10,7 +10,7 @@
         },
         "interactionModel": {
           "en-GB": {
-            "eTag": "3ed11e33a5a1212a0603a75cf6bc37c3"
+            "eTag": "c0bfcfcf80bad3e5c219e5fe186f1807"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-Lucky-Fortune-default",
             "handler": "index.handler",
-            "revisionId": "b6bbc532-b1ea-48b5-9833-ca6c74b7df90",
+            "revisionId": "74bd8cc9-a518-4ec0-960d-ffb94839147c",
             "runtime": "nodejs10.x"
           }
         ]

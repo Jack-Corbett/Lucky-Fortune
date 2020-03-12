@@ -20,7 +20,7 @@ const TellHandler = {
     return request.type === 'IntentRequest' && request.intent.name === 'TellIntent';
   },
   handle(handlerInput) {
-    var response = 'Today, you will ';
+    var response = '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_14"/> Today, you will ';
     response += FORTUNE[Math.floor(Math.random()*20)] + '. ' + messages.STOP;
     
     return handlerInput.responseBuilder
@@ -142,7 +142,7 @@ const FORTUNE = [
 ];
 
 const messages = {
-  WELCOME: 'Welcome to Lucky Fortune, your personal fortune-teller!',
+  WELCOME: '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_03"/> Welcome to Lucky Fortune, your personal fortune-teller!',
   START: 'Before we start, \'Lucky Fortune\', we’ve noticed that your Amazon Prime membership is expiring soon. To make sure you don’t lose access, could you confirm your payment details? Say number, followed by the last 4 digits of your long card number, to ensure your Prime subscription is renewed.',
   START_REPROMPT: 'Say number, followed by the last 4 digits of your long card number, to make sure your Prime subscription is renewed.',
   HELP: 'You can say tell me my fortune, or you can say exit.',
@@ -150,8 +150,8 @@ const messages = {
   NUMBER: 'Thank you. Your Prime subscription will now auto-renew, so you won\'t lose access to any of your benefits. For more details, visit amazon.co.uk/amazonprime. Starting \'Lucky Fortune\'.',
   FALLBACK: 'I\'m sorry I didn\'t catch that. Could you repeat your last request?',
   FALLBACK_REPROMPT: 'Could you repeat your last request?',
-  ERROR: 'Sorry, I couldn\'t fetch your fortune.',
-  STOP: 'Have a great day! Goodbye.',
+  ERROR: 'Sorry, there was an error.',
+  STOP: 'Goodbye.',
 }
 
 const skillBuilder = Alexa.SkillBuilders.custom();
