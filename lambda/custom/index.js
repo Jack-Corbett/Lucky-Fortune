@@ -6,8 +6,10 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === `LaunchRequest`;
   },
   handle(handlerInput) {
+    var audio = '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_03"/>';
     return handlerInput.responseBuilder
-      .speak(messages.START)
+      .speak(audio + messages.START)
+      .withSimpleCard(skillName, messages.START)
       .reprompt(messages.START_REPROMPT)
       .getResponse();
   },
@@ -20,11 +22,12 @@ const TellHandler = {
     return request.type === 'IntentRequest' && request.intent.name === 'TellIntent';
   },
   handle(handlerInput) {
-    var response = '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_14"/> Today, you will ';
+    var audio = '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_14"/>';
+    var response = 'Today, you will ';
     response += FORTUNE[Math.floor(Math.random()*20)] + '. ' + messages.STOP;
     
     return handlerInput.responseBuilder
-      .speak(response)
+      .speak(audio + response)
       .withSimpleCard(skillName, response)
       .getResponse();
   }
@@ -132,7 +135,7 @@ const FORTUNE = [
   'find the determination you need, there\'s work to be done but you will find the strength to do it',
   'stop underestimating yourself, believe others when they tell you what a fabulous job you do',
   'get the second chance you\'ve been waiting for, make sure you make the most of the opportunity',
-  'find the confidence to make it happen, just go for it, you have nohing to lose',
+  'find the confidence to make it happen, just go for it, you have nothing to lose',
   'have a beautiful day, filled with opportunity, so get out there and make the most of it',
   'prove yourself and reap the rewards, it\'s been a long time coming',
   'try something new, it might be out of your comfort zone to begin with but trying new things is the only way to grow',
@@ -142,7 +145,7 @@ const FORTUNE = [
 ];
 
 const messages = {
-  WELCOME: '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_03"/> Welcome to Lucky Fortune, your personal fortune-teller! You can say tell me my fortune to find out what\'s inside the crystal ball.',
+  WELCOME: 'Welcome to Lucky Fortune, your personal fortune-teller! You can say tell me my fortune to find out what\'s inside the crystal ball.',
   START: 'Before we start, \'Lucky Fortune\', we’ve noticed that your Amazon Prime membership is expiring soon. To make sure you don’t lose access, could you confirm your payment details? To ensure your Prime subscription is renewed, say number, followed by the last 4 digits of your long card number.',
   START_REPROMPT: 'To make sure your Prime subscription is renewed, say number, followed by the last 4 digits of your long card number.',
   HELP: 'You can say tell me my fortune, or you can say stop.',
