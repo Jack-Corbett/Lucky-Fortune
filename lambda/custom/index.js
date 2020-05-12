@@ -6,10 +6,9 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === `LaunchRequest`;
   },
   handle(handlerInput) {
-    var audio = '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_03"/>';
     return handlerInput.responseBuilder
-      .speak(audio + messages.START)
-      .withSimpleCard(skillName, messages.START)
+      .speak(messages.START)
+      .withSimpleCard('Alexa', messages.START)
       .reprompt(messages.START_REPROMPT)
       .getResponse();
   },
@@ -45,8 +44,8 @@ const LuckyNumberHandler = {
     console.log(value);
 
     return handlerInput.responseBuilder
-      .speak(response + messages.SPACE + messages.WELCOME)
-      .withSimpleCard(skillName, response)
+      .speak(response + messages.SPACE + '<audio src="soundbank://soundlibrary/magic_spells/magic_spells_03"/>' + messages.WELCOME)
+      .withSimpleCard('Alexa', response)
       .reprompt(messages.HELP)
       .getResponse();
   }
