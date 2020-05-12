@@ -42,9 +42,9 @@ const LuckyNumberHandler = {
     console.log(value);
 
     return handlerInput.responseBuilder
-      .speak(response)
+      .speak(response + messages.SPACE + messages.WELCOME)
       .withSimpleCard(skillName, response)
-      .reprompt(messages.WELCOME + ' ' + messages.HELP)
+      .reprompt(messages.HELP)
       .getResponse();
   }
 };
@@ -151,6 +151,7 @@ const messages = {
   FALLBACK: 'I\'m sorry I didn\'t catch that. Could you repeat your last request?',
   FALLBACK_REPROMPT: 'Could you repeat your last request?',
   ERROR: 'Sorry, there was an error.',
+  SPACE: '<break time="2s"/>',
   STOP: 'Goodbye.',
 }
 
