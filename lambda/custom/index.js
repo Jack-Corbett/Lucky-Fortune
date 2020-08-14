@@ -126,7 +126,7 @@ const FORTUNE = [
   'stand by your convictions, don\'t be pushed around, stay strong and you will achieve great things',
   'meet someone new, take the time to get to know them, they will make you smile',
   'finish that job you\'ve been putting off, it\'s the only way to clear your mind',
-  'give a freind the advice they need. If you\'re there for them, they will be there for you in the future',
+  'give a friend the advice they need. If you\'re there for them, they will be there for you in the future',
   'help someone in need, sometimes the best reward is what we can do for others',
   'see your efforts come to fruition. Life is a marathon not a sprint and you\'ve earned this',
   'get the support you need. It\'s okay to ask for help. Everyone needs guidance to find their way',
