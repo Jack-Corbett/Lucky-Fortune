@@ -4,6 +4,9 @@
       "locales": {
         "en-GB": {
           "summary": "Find out your fortune.",
+          "description": "Ask me for your fortune.",
+          "smallIconUri": "https://raw.githubusercontent.com/Jack-Corbett/Lucky-Fortune/master/Small%20Icon.png",
+          "largeIconUri": "https://raw.githubusercontent.com/Jack-Corbett/Lucky-Fortune/master/Large%20Icon.png",
           "examplePhrases": [
             "Alexa open lucky fortune",
             "Alexa ask lucky fortune to tell me my fortune",
@@ -14,11 +17,29 @@
             "fortune",
             "horoscope"
           ],
-          "name": "Lucky Fortune",
-          "description": "Ask me for your fortune."
+          "name": "Lucky Fortune"
         }
       },
+      "distributionCountries": [
+        "GB"
+      ],
+      "isAvailableWorldwide": false,
+      "distributionMode": "PUBLIC",
+      "testingInstructions": "TODO",
       "category": "ASTROLOGY"
+    },
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": {
+        "en-GB": {
+          "privacyPolicyUrl": "https://github.com/Jack-Corbett/Lucky-Fortune/blob/master/Privacy%20Policy.md",
+          "termsOfUseUrl": ""
+        }
+      }
     },
     "apis": {
       "custom": {
