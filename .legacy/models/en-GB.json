@@ -1,0 +1,54 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "lucky fortune",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "TellIntent",
+          "samples": [
+            "fortune",
+            "tell me my fortune",
+            "give me my fortune",
+            "what's my fortune",
+            "what is my fortune",
+            "tell me something",
+            "give me something"
+          ],
+          "slots": []
+        },
+        {
+          "name": "LuckyNumberIntent",
+          "samples" : [
+            "number {Number}",
+            "number is {Number}",
+            "my number is {Number}",
+            "lucky number {Number}",
+            "my luck number is {Number}"
+          ],
+          "slots": [
+            {
+              "name": "Number",
+              "type": "AMAZON.NUMBER"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

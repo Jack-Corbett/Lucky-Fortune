@@ -1,0 +1,32 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:499295336600:function:ask-custom-Lucky-Fortune-default"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "category": "ASTROLOGY",
+      "locales": {
+        "en-GB": {
+          "description": "Ask me for your fortune.",
+          "examplePhrases": [
+            "Alexa open lucky fortune",
+            "Alexa ask lucky fortune to tell me my fortune",
+            "Alexa ask lucky fortune for my fortune"
+          ],
+          "keywords": [
+            "lucky",
+            "fortune",
+            "horoscope"
+          ],
+          "name": "Lucky Fortune",
+          "summary": "Find out your fortune."
+        }
+      }
+    }
+  }
+}
